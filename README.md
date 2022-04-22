@@ -1,4 +1,4 @@
-<h1 align="center"> Formulário de contato com campos validados</h1>
+<h1 align="center"> Buscador de CEP</h1>
 <br>
 <br>
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 <br>
 <h2>:clipboard: Descrição do projeto</h2>
-<p>Template de formulário de contato padrão, que usa Fetch para preencher automaticamente os campos de endereço,
+<p>Template da parte de endereço de um formulário padrão, que usa Fetch para preencher automaticamente os campos de endereço,
   e tem campos que são validados através do HTML e Javascript.</p>
 <br>
 <h2> :hammer: Funcionalidades</h2>
