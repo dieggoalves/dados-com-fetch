@@ -12,7 +12,7 @@
 </head>
 <body class="screen">
     <header>
-        <h1 class="titulo">Recuperando dados de CEP com Fetch</h1>
+        <h1 class="titulo">Digite o CEP para receber os dados de endereço</h1>
     </header>
     
     <main class="container">
@@ -26,6 +26,10 @@
                 <input type="text" id="logradouro" class="formulario__input" data-tipo="logradouro" required>
             </div>
             <div class="formulario__campo">
+                <label for="bairro" class="formulario__label">Bairro</label>
+                <input type="text" id="bairro" class="formulario__input" data-tipo="bairro" required>
+            </div>
+            <div class="formulario__campo">
                 <label for="cidade" class="formulario__label">Cidade</label>
                 <input type="text" id="cidade" class="formulario__input" data-tipo="cidade" required>
             </div>
@@ -33,7 +37,7 @@
                 <label for="estado" class="formulario__label">Estado</label>
                 <input type="text" id="estado" class="formulario__input" data-tipo="estado" required>
             </div>
-            <button class="botao-cadastrar">Cadastrar CEP</button>
+            <button class="botao-cadastrar">Buscar CEP</button>
         </form>
     </main>
 

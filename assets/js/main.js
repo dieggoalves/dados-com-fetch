@@ -35,6 +35,7 @@ function recuperaCEP(cep) {
             mudaCorBordaDoInput();
 
             preencheCamposDeEndereco(data);
+            // console.log(data); Mostra os dados recuperados na tela
 
             return;     
         });
@@ -51,6 +52,7 @@ function recuperaCEP(cep) {
 function preencheCamposDeEndereco(data) {
 
     campoDeLogradouro.value = data.logradouro;
+    campoDeBairro.value = data.bairro;
     campoDeCidade.value = data.localidade;
     campoDeEstado.value = data.uf;
 }
@@ -67,18 +69,28 @@ function mudaCorBordaDoInput() {
 // VARIÁVEIS ARMAZENANDO OS INPUTS
 const campoDeCep = document.querySelector('[data-tipo="cep"]');
 const campoDeLogradouro = document.querySelector('[data-tipo="logradouro"]');
+const campoDeBairro = document.querySelector('[data-tipo="bairro"');
 const campoDeCidade = document.querySelector('[data-tipo="cidade"]');
 const campoDeEstado = document.querySelector('[data-tipo="estado"]');
+
+const botaoDeBusca = document.querySelector('.botao-cadastrar');
 
 const mensagensDeErro = {
 
     cepInvalido: 'Não foi possível buscar o CEP',
-    cepComErroDeDigitacao: 'CEP inválido. Por favor, digite o CEP corretamente'
+    cepComErroDeDigitacao: 'Digite um CEP válido'
 }
 
 let erroNoCep = false;
 
 campoDeCep.addEventListener('blur', () => {
+
+    const cepDigitado = campoDeCep.value.replace(/\D/g, '');
+    recuperaCEP(cepDigitado);
+});
+
+botaoDeBusca.addEventListener('click', evento => {
+    evento.preventDefault();
 
     const cepDigitado = campoDeCep.value.replace(/\D/g, '');
     recuperaCEP(cepDigitado);
